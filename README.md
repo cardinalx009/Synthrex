@@ -212,3 +212,4 @@ css animation examples, css effects, button hover effects, loading animation css
 ---
 
 Made with ❤️ by developers for developers
+# Synthrex
