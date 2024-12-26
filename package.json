@@ -1,0 +1,12 @@
+{
+  "name": "css-3d-animation-showcase",
+  "version": "1.0.0",
+  "description": "A stunning web platform for CSS 3D animation showcases",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
