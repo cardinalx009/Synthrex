@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Synthrax - Revolutionary CSS Animation Library. Create stunning web animations with our unique collection of effects. Pure CSS, no JavaScript required!">
+    <meta name="keywords" content="Synthrax, css animations, web effects, button animations, loading animations, hover effects, animation library, css effects, web design, frontend animations">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Synthrax: Revolutionary CSS Animation Library">
+    <meta property="og:description" content="Create stunning web animations with our unique collection of effects. Pure CSS, no JavaScript required!">
+    <meta property="og:image" content="path-to-your-preview-image.jpg">
+    <meta property="og:url" content="your-website-url">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Synthrax: Revolutionary CSS Animation Library">
+    <meta name="twitter:description" content="Create stunning web animations with Synthrax - The future of CSS animations">
+    <meta name="twitter:image" content="path-to-your-preview-image.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="author" content="Synthrax">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#6c5ce7">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Synthrax: Revolutionary CSS Animation Library",
+        "description": "Create stunning web animations with our unique collection of effects. Pure CSS, no JavaScript required!",
+        "keywords": "Synthrax, css animations, web effects, animations",
+        "author": {
+            "@type": "Organization",
+            "name": "Synthrax"
+        },
+        "dateModified": "2024-12-26",
+        "programmingLanguage": "CSS"
+    }
+    </script>
+
+    <title>Synthrax: Revolutionary CSS Animation Library</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-spark"></div>
+                </div>
+                <div class="logo-text">Synth<span>rax</span></div>
+            </a>
+            <div class="nav-controls">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search animations...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <button class="theme-toggle" title="Toggle dark mode">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="intro-section">
+        <h1>Beautiful CSS Animations</h1>
+        <p>Discover, copy, and use stunning CSS animations for your projects</p>
+        <div class="featured-tags">
+            <span>Popular:</span>
+            <button class="tag-btn" data-filter="3D">3D</button>
+            <button class="tag-btn" data-filter="Text">Text</button>
+            <button class="tag-btn" data-filter="Button">Button</button>
+            <button class="tag-btn" data-filter="Hover">Hover</button>
+        </div>
+    </div>
+
+    <div class="filters">
+        <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-border-all"></i> All
+            </button>
+            <button class="filter-btn" data-filter="3D">
+                <i class="fas fa-cube"></i> 3D
+            </button>
+            <button class="filter-btn" data-filter="Text">
+                <i class="fas fa-font"></i> Text
+            </button>
+            <button class="filter-btn" data-filter="Loading">
+                <i class="fas fa-spinner"></i> Loading
+            </button>
+            <button class="filter-btn" data-filter="Button">
+                <i class="fas fa-square"></i> Button
+            </button>
+            <button class="filter-btn" data-filter="Hover">
+                <i class="fas fa-hand-pointer"></i> Hover
+            </button>
+        </div>
+        <div class="view-options">
+            <button class="view-btn active" data-view="grid">
+                <i class="fas fa-th"></i>
+            </button>
+            <button class="view-btn" data-view="list">
+                <i class="fas fa-list"></i>
+            </button>
+        </div>
+    </div>
+
+    <main>
+        <div class="animation-grid"></div>
+    </main>
+
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <div id="animationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <div class="modal-badges">
+                    <div class="complexity-badge" id="modalComplexity"></div>
+                    <div class="likes">
+                        <button class="like-btn">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-preview-container">
+                <div class="modal-preview" id="modalPreview"></div>
+                <div class="preview-controls">
+                    <button class="control-btn" onclick="restartAnimation()">
+                        <i class="fas fa-redo"></i> Restart
+                    </button>
+                    <button class="control-btn" onclick="slowDownAnimation()">
+                        <i class="fas fa-slow-motion-video"></i> Slow Motion
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-details">
+                <div class="tags" id="modalTags"></div>
+                <p id="modalDescription"></p>
+            </div>
+
+            <div class="code-section">
+                <div class="code-tabs">
+                    <button class="tab-btn active" data-tab="css">
+                        <i class="fab fa-css3"></i> CSS
+                    </button>
+                    <button class="tab-btn" data-tab="html">
+                        <i class="fab fa-html5"></i> HTML
+                    </button>
+                </div>
+                
+                <div class="tab-content active" data-tab="css">
+                    <div class="code-header">
+                        <span>CSS Code</span>
+                        <button class="copy-button" onclick="copyCode('css')">
+                            <i class="far fa-copy"></i> Copy CSS
+                        </button>
+                    </div>
+                    <pre><code class="language-css" id="modalCssCode"></code></pre>
+                </div>
+                
+                <div class="tab-content" data-tab="html">
+                    <div class="code-header">
+                        <span>HTML Code</span>
+                        <button class="copy-button" onclick="copyCode('html')">
+                            <i class="far fa-copy"></i> Copy HTML
+                        </button>
+                    </div>
+                    <pre><code class="language-html" id="modalHtmlCode"></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
